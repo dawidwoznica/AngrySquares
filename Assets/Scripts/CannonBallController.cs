@@ -5,21 +5,23 @@ using UnityEngine;
 public class CannonBallController : MonoBehaviour {
 
     public GameObject Explosion;
+    private AudioSource _boomSound;
 
-	// Use this for initialization
+    void Awake()
+    {
+        _boomSound = GetComponent<AudioSource>();
+    }
+
 	void Start () {
-		Destroy(gameObject, 3);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		//Destroy(gameObject, 5);
 	}
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         Instantiate(Explosion, transform.position, transform.rotation);
         //Destroy(other.gameObject, 3);
-        Destroy(gameObject);
+        _boomSound.Play();
+        //gameObject.SetActive(false);
+        //Destroy(gameObject, 2);
     }
 }
