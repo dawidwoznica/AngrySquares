@@ -22,7 +22,9 @@ GameObject:
   - component: {fileID: 212436461868921394}
   - component: {fileID: 61542350112128612}
   - component: {fileID: 50174631041692050}
-  m_Layer: 0
+  - component: {fileID: 114386110385000764}
+  - component: {fileID: 114895849438506020}
+  m_Layer: 8
   m_Name: Exploding Keg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168011006307212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.182, y: -1.15, z: 0}
+  m_LocalPosition: {x: 4.29, y: -2.78, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,6 +89,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2581222, y: 3.7518053}
   m_EdgeRadius: 0
+--- !u!114 &114386110385000764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168011006307212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7fda2dd230d4c4d92ba4437a064fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KegExplosion: {fileID: 198910185480984206, guid: 4bf155dbbd0505a40a5b2e6f6bb8a5af,
+    type: 2}
+--- !u!114 &114895849438506020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168011006307212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212436461868921394
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -15,11 +15,4 @@ public class KegController : MonoBehaviour {
 	}
 
 
-	void OnCollisionEnter2D(Collision2D other)
-	{
-	    if (other.gameObject.layer == 8)
-	    {
-	        Destroy(gameObject, 0.1f);
-	    }
-	}
 }
