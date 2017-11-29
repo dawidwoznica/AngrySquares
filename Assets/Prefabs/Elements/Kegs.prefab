@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61201229551631728}
   - component: {fileID: 50699647752140378}
   - component: {fileID: 114980225332147798}
-  - component: {fileID: 114576728765426930}
   m_Layer: 8
   m_Name: Keg 4
   m_TagString: Untagged
@@ -58,7 +57,6 @@ GameObject:
   - component: {fileID: 61744963535760018}
   - component: {fileID: 50737637494934332}
   - component: {fileID: 114193046629617206}
-  - component: {fileID: 114673576283706204}
   m_Layer: 8
   m_Name: Keg 5
   m_TagString: Untagged
@@ -78,7 +76,6 @@ GameObject:
   - component: {fileID: 61685657522221210}
   - component: {fileID: 50979629908233656}
   - component: {fileID: 114572956481879246}
-  - component: {fileID: 114614565368636510}
   m_Layer: 8
   m_Name: Keg 2
   m_TagString: Untagged
@@ -98,7 +95,6 @@ GameObject:
   - component: {fileID: 61656837523880708}
   - component: {fileID: 50752603556030370}
   - component: {fileID: 114234327280294174}
-  - component: {fileID: 114640597083115654}
   m_Layer: 8
   m_Name: Keg 3
   m_TagString: Untagged
@@ -118,7 +114,6 @@ GameObject:
   - component: {fileID: 61835336650135844}
   - component: {fileID: 50854910991855460}
   - component: {fileID: 114621699211401894}
-  - component: {fileID: 114852097762010078}
   m_Layer: 8
   m_Name: Keg 1
   m_TagString: Untagged
@@ -138,7 +133,6 @@ GameObject:
   - component: {fileID: 61904313163604046}
   - component: {fileID: 50030647716494070}
   - component: {fileID: 114698356065561380}
-  - component: {fileID: 114108240162993078}
   m_Layer: 8
   m_Name: Keg 6
   m_TagString: Untagged
@@ -513,17 +507,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.062582, y: 3.8914764}
   m_EdgeRadius: 0
---- !u!114 &114108240162993078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1765408121351438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114193046629617206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -535,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!114 &114234327280294174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -546,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!114 &114572956481879246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -557,28 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114576728765426930
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1077185132223564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114614565368636510
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545797940033760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!114 &114621699211401894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,28 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114640597083115654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1588776335982138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114673576283706204
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518481640403958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!114 &114698356065561380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -623,17 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114852097762010078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1746687777871040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!114 &114980225332147798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -645,6 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!212 &212049313480829072
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KegController : MonoBehaviour {
+public class KegController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public ParticleSystem KegParts;
+
+
+    void OnDestroy()
+    {
+        Instantiate(KegParts, transform.position, transform.rotation);
+    }
 
 
 }
