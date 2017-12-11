@@ -255,7 +255,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1515306154}
+      objectReference: {fileID: 0}
     - target: {fileID: 114916137620993666, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -265,7 +265,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1515306154}
+      objectReference: {fileID: 0}
     - target: {fileID: 223697222026558752, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
         type: 2}
       propertyPath: m_Camera
@@ -489,8 +489,14 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.96
       objectReference: {fileID: 0}
+    - target: {fileID: 114959168914882592, guid: b402f78a6f25f0847bbec86e8de26aaf,
+        type: 2}
+      propertyPath: BarrelRotationSpeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61506951924393708, guid: b402f78a6f25f0847bbec86e8de26aaf, type: 2}
+    - {fileID: 114729970799473420, guid: b402f78a6f25f0847bbec86e8de26aaf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b402f78a6f25f0847bbec86e8de26aaf, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &911142595
@@ -719,12 +725,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1108152431620592, guid: b402f78a6f25f0847bbec86e8de26aaf,
     type: 2}
   m_PrefabInternal: {fileID: 905900421}
---- !u!114 &1515306154 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114729970799473420, guid: b402f78a6f25f0847bbec86e8de26aaf,
-    type: 2}
-  m_PrefabInternal: {fileID: 905900421}
-  m_Script: {fileID: 11500000, guid: 29d52df18453be94badf0b2501cad56f, type: 3}
 --- !u!114 &1515306156 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114959168914882592, guid: b402f78a6f25f0847bbec86e8de26aaf,
