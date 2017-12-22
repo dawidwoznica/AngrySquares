@@ -12,6 +12,7 @@ public class CannonController : MonoBehaviour {
 	Rigidbody2D _cannonBallRB;
 	public Transform ShotPosition;
     public float BarrelRotationSpeed;
+    public CannonMovementController CannonMovementController;
 
 
     private ParticleSystem _shootEffect;
@@ -27,8 +28,18 @@ public class CannonController : MonoBehaviour {
 		_shootEffect = GetComponentInChildren<ParticleSystem>();
 
         keywordActions.Add("fire", Shoot);
+	    keywordActions.Add("shoot", Shoot);
+        keywordActions.Add("shot", Shoot);
         keywordActions.Add("up", Up);
 	    keywordActions.Add("down", Down);
+        keywordActions.Add("upper", Up);
+        keywordActions.Add("lower", Down);
+	    keywordActions.Add("left", CannonMovementController.Left);
+	    keywordActions.Add("right", CannonMovementController.Right);
+	    keywordActions.Add("go left", CannonMovementController.Left);
+	    keywordActions.Add("go right", CannonMovementController.Right);
+	    keywordActions.Add("move left", CannonMovementController.Left);
+	    keywordActions.Add("move right", CannonMovementController.Right);
 
         keywordRecognizer = new KeywordRecognizer(keywordActions.Keys.ToArray());
 	    keywordRecognizer.OnPhraseRecognized += OnKeyRecognized;

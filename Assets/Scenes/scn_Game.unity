@@ -164,12 +164,12 @@ Prefab:
     - target: {fileID: 224680070596503084, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 264
+      value: 186.5
       objectReference: {fileID: 0}
     - target: {fileID: 224680070596503084, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 148.5
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 224680070596503084, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
         type: 2}
@@ -494,6 +494,11 @@ Prefab:
       propertyPath: BarrelRotationSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114959168914882592, guid: b402f78a6f25f0847bbec86e8de26aaf,
+        type: 2}
+      propertyPath: CannonMovementController
+      value: 
+      objectReference: {fileID: 1680335990}
     m_RemovedComponents:
     - {fileID: 61506951924393708, guid: b402f78a6f25f0847bbec86e8de26aaf, type: 2}
     - {fileID: 114729970799473420, guid: b402f78a6f25f0847bbec86e8de26aaf, type: 2}
@@ -761,6 +766,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1191150594217282, guid: b402f78a6f25f0847bbec86e8de26aaf,
     type: 2}
   m_PrefabInternal: {fileID: 905900421}
+--- !u!114 &1680335990 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114620752471027316, guid: b402f78a6f25f0847bbec86e8de26aaf,
+    type: 2}
+  m_PrefabInternal: {fileID: 905900421}
+  m_Script: {fileID: 11500000, guid: 53f4e326afa059049a4c7c9dace8d49c, type: 3}
 --- !u!61 &1680335992
 BoxCollider2D:
   m_ObjectHideFlags: 0
