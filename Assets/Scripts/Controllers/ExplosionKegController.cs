@@ -5,10 +5,8 @@ using UnityEngine;
 public class ExplosionKegController : MonoBehaviour
 {
 
-    public ParticleSystem KegExplosion;
-
     void OnDestroy()
     {
-        Instantiate(KegExplosion, transform.position, transform.rotation);
+        Instantiate(GameManager.KegManager.KegExplosion, transform.position, transform.rotation);
     }
 }

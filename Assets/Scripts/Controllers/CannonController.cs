@@ -7,27 +7,20 @@ using UnityEngine.Windows.Speech;
 
 public class CannonController : MonoBehaviour {
 
-	public float FirePower;
-	public GameObject CannonBall;
 	Rigidbody2D _cannonBallRB;
-	public Transform ShotPosition;
-    public float BarrelRotationSpeed;
     public CannonMovementController CannonMovementController;
 
-
-    private ParticleSystem _shootEffect;
 	private AudioSource _cannonShoot;
 
-    private Dictionary<string, Action> keywordActions = new Dictionary<string, Action>();
-    private KeywordRecognizer keywordRecognizer;
+/*    private Dictionary<string, Action> keywordActions = new Dictionary<string, Action>();
+    private KeywordRecognizer keywordRecognizer;*/
 
 	// Use this for initialization
 	void Start ()
 	{
 		_cannonShoot = GetComponent<AudioSource>();
-		_shootEffect = GetComponentInChildren<ParticleSystem>();
 
-        keywordActions.Add("fire", Shoot);
+     /*   keywordActions.Add("fire", Shoot);
 	    keywordActions.Add("shoot", Shoot);
         keywordActions.Add("shot", Shoot);
         keywordActions.Add("up", Up);
@@ -43,14 +36,14 @@ public class CannonController : MonoBehaviour {
 
         keywordRecognizer = new KeywordRecognizer(keywordActions.Keys.ToArray());
 	    keywordRecognizer.OnPhraseRecognized += OnKeyRecognized;
-        keywordRecognizer.Start();
+        keywordRecognizer.Start();*/
 	}
-
-    private void OnKeyRecognized(PhraseRecognizedEventArgs args)
+    
+   /* private void OnKeyRecognized(PhraseRecognizedEventArgs args)
     {
         Debug.Log("Keyword: "+ args.text);
         keywordActions[args.text].Invoke();
-    }
+    }*/
 
 
     // Update is called once per frame
@@ -61,20 +54,20 @@ public class CannonController : MonoBehaviour {
 	public void Shoot()
 	{
 		_cannonShoot.Play();
-		_shootEffect.Play();
-		GameObject _cannonBallCopy = Instantiate(CannonBall, ShotPosition.position, transform.rotation) as GameObject;
+		GameManager.CannonManager.CannonShootEffect.Play();
+		GameObject _cannonBallCopy = Instantiate(GameManager.CannonManager.CannonBall, GameManager.CannonManager.ShotPosition.position, transform.rotation);
 		_cannonBallRB = _cannonBallCopy.GetComponent<Rigidbody2D>();
-		_cannonBallRB.AddForce(transform.right * FirePower);
+		_cannonBallRB.AddForce(transform.right * GameManager.CannonManager.FirePower);
 	}
 
 
     public void Up()
     {
-        transform.Rotate(0, 0, Time.deltaTime * BarrelRotationSpeed);
+        transform.Rotate(0, 0, Time.deltaTime * GameManager.CannonManager.BarrelRotationSpeed);
     }
 
     public void Down()
     {
-        transform.Rotate(0, 0, -Time.deltaTime * BarrelRotationSpeed);
+        transform.Rotate(0, 0, -Time.deltaTime * GameManager.CannonManager.BarrelRotationSpeed);
     }
 }

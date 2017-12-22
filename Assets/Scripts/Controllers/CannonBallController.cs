@@ -26,7 +26,7 @@ public class CannonBallController : MonoBehaviour {
             //Destroy(other.gameObject, 3);
             if (other.gameObject.layer == 8)
             {
-                Destroy(other.gameObject, 0.001f);
+                Destroy(other.gameObject);
             }
             _boomSound.Play();
             _afterCollision = true;

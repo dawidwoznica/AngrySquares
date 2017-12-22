@@ -20,10 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 224298650980630094}
   - component: {fileID: 212683213345479294}
-  - component: {fileID: 61506951924393708}
   - component: {fileID: 114959168914882592}
   - component: {fileID: 82630847014153576}
-  - component: {fileID: 114729970799473420}
+  - component: {fileID: 61758049450528062}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -56,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224364290709894508}
   - component: {fileID: 114620752471027316}
+  - component: {fileID: 61152042618914560}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1349977552613462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.36, y: 0.93, z: 0}
+  m_LocalPosition: {x: 4.82, y: 0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224298650980630094}
@@ -164,7 +164,32 @@ Transform:
   m_Father: {fileID: 224364290709894508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.427001}
---- !u!61 &61506951924393708
+--- !u!61 &61152042618914560
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191150594217282}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.305381, y: -0.056732655}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.008714, y: 4.381283}
+  m_EdgeRadius: 0
+--- !u!61 &61758049450528062
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -176,7 +201,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002726376, y: -0.0027261972}
+  m_Offset: {x: -0.16311228, y: 0.49}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -187,7 +212,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13273609, y: 0.12183046}
+  m_Size: {x: 8.090002, y: 1.4870876}
   m_EdgeRadius: 0
 --- !u!82 &82630847014153576
 AudioSource:
@@ -294,18 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WheelController: {fileID: 114378799600577846}
   CannonSpeed: 2
---- !u!114 &114729970799473420
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1108152431620592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d52df18453be94badf0b2501cad56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BarrelRotationSpeed: 50
+  time: 0
 --- !u!114 &114959168914882592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,6 +334,8 @@ MonoBehaviour:
   FirePower: 900
   CannonBall: {fileID: 1059687981861074, guid: af9d6df6b9f617c4cbb0dcc866741973, type: 2}
   ShotPosition: {fileID: 4086286548935534}
+  BarrelRotationSpeed: 200
+  CannonMovementController: {fileID: 114620752471027316}
 --- !u!198 &198150098169681772
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3838,9 +3854,9 @@ RectTransform:
   m_Father: {fileID: 224364290709894508}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.32}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000047683716, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.07999952, y: -0.08}
   m_SizeDelta: {x: 0.16, y: 0.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224364290709894508
@@ -3849,18 +3865,18 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1191150594217282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.002, y: -2.526, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.012486771, w: 0.99992204}
+  m_LocalPosition: {x: -6.847, y: -4.249, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 4906535127987248}
   - {fileID: 4013701688797644}
   - {fileID: 224298650980630094}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.4310001}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.002, y: -2.526}
+  m_AnchoredPosition: {x: -6.847, y: -4.249}
   m_SizeDelta: {x: 0.16, y: 0.16}
   m_Pivot: {x: 0.5, y: 0.5}
