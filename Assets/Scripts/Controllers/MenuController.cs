@@ -1,34 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void StartGame()
     {
-        Debug.Log("loaded");
+        SceneManager.LoadScene("scn_Lvl1", LoadSceneMode.Single);
+    }
 
-        Application.LoadLevel(1);
+    public void Levels()
+    {
+        SceneManager.LoadScene("scn_Levels", LoadSceneMode.Single);
     }
 
     public void Options()
     {
-        
+        SceneManager.LoadScene("scn_Options", LoadSceneMode.Single);
     }
 
     public void Credits()
     {
-        
+        SceneManager.LoadScene("scn_Credits", LoadSceneMode.Single);
     }
 
     public void Quit()

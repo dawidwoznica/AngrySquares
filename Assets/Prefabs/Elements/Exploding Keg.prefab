@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 0.4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -100,8 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7fda2dd230d4c4d92ba4437a064fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KegExplosion: {fileID: 198910185480984206, guid: 4bf155dbbd0505a40a5b2e6f6bb8a5af,
-    type: 2}
 --- !u!114 &114895849438506020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9590f0b6f09ea4bb9303421279b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KegParts: {fileID: 198092550704689550, guid: 5e566298f7f61fa4eb69930d7eaebdfc, type: 2}
 --- !u!212 &212436461868921394
 SpriteRenderer:
   m_ObjectHideFlags: 1

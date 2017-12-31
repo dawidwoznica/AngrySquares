@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static CannonManager CannonManager;
     public static KegManager KegManager;
+    public static PlayerManager PlayerManager;
 
     void Awake()
     {
@@ -36,5 +37,6 @@ public class GameManager : MonoBehaviour
     {
         CannonManager = GetComponent<CannonManager>();
         KegManager = GetComponent<KegManager>();
+        PlayerManager = GetComponent<PlayerManager>();
     }
 }
