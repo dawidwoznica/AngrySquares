@@ -53,8 +53,11 @@ public class CannonController : MonoBehaviour {
 
 	public void Shoot()
 	{
-		_cannonShoot.Play();
-		GameManager.CannonManager.CannonShootEffect.Play();
+	    if (!GameManager.OptionsManager.IsSoundMuted)
+	    {
+	        _cannonShoot.Play();
+        }
+        GameManager.CannonManager.CannonShootEffect.Play();
 		GameObject _cannonBallCopy = Instantiate(GameManager.CannonManager.CannonBall, GameManager.CannonManager.ShotPosition.position, transform.rotation);
 		_cannonBallRB = _cannonBallCopy.GetComponent<Rigidbody2D>();
 		_cannonBallRB.AddForce(transform.right * GameManager.CannonManager.FirePower);

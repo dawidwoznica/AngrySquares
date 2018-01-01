@@ -7,6 +7,6 @@ public class BackButtonController : MonoBehaviour {
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("scn_MainMenu");
+        SceneManager.LoadScene("scn_MainMenu", LoadSceneMode.Single);
     }
 }

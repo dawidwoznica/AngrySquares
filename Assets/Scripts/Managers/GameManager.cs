@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static CannonManager CannonManager;
     public static KegManager KegManager;
     public static PlayerManager PlayerManager;
+    public static OptionsManager OptionsManager;
 
     void Awake()
     {
@@ -22,21 +23,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-
     private void GetManagers()
     {
         CannonManager = GetComponent<CannonManager>();
         KegManager = GetComponent<KegManager>();
         PlayerManager = GetComponent<PlayerManager>();
+        OptionsManager = GetComponent<OptionsManager>();
     }
 }

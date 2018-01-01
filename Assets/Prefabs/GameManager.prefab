@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114276031562107774}
   - component: {fileID: 114798545432022910}
   - component: {fileID: 114936322685343578}
+  - component: {fileID: 114881145533647966}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -69,6 +70,18 @@ MonoBehaviour:
   CannonBall: {fileID: 1059687981861074, guid: af9d6df6b9f617c4cbb0dcc866741973, type: 2}
   ShotPosition: {fileID: 0}
   CannonShootEffect: {fileID: 0}
+--- !u!114 &114881145533647966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536463809966082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1228e716720ca774394d82abd63d781a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSoundMuted: 0
 --- !u!114 &114936322685343578
 MonoBehaviour:
   m_ObjectHideFlags: 1

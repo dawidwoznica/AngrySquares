@@ -28,7 +28,10 @@ public class CannonBallController : MonoBehaviour {
             {
                 Destroy(other.gameObject);
             }
-            _boomSound.Play();
+            if (!GameManager.OptionsManager.IsSoundMuted)
+            {
+                _boomSound.Play();
+            }
             _afterCollision = true;
             //gameObject.SetActive(false);
             //Destroy(gameObject, 2);
