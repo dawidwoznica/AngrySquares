@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
 
+
     public void StartGame()
     {
+        GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().Stop();
+        GameObject.Find("BackgroundWind").GetComponent<AudioSource>().Stop();
+        //GameObject.Find("Dust").GetComponent<ParticleSystem>().Stop();
         SceneManager.LoadScene("scn_Lvl1", LoadSceneMode.Single);
     }
 

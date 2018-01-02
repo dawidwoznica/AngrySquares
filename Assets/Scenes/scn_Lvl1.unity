@@ -312,6 +312,45 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 911142598}
+    - target: {fileID: 224024421560103150, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224555900347651158, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224139629836856886, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224840434916623310, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224433428797040384, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224380644326430858, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926630941325262, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223697222026558752, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2bc5a8eacca5c4c980c6d8ecd92a83, type: 2}
   m_IsPrefabParent: 0

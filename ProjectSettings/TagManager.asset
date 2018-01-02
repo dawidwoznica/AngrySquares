@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - Keg
-  - 
+  - CanvasView
   - 
   - 
   - 
@@ -39,9 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: CanvasView
-    uniqueID: 3198572243
+  - name: UI
+    uniqueID: 2478347903
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: CanvasView
+    uniqueID: 3198572243
     locked: 0
