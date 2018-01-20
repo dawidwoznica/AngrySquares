@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour {
     public void StartGame()
     {
         GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().Stop();
-        GameObject.Find("BackgroundWind").GetComponent<AudioSource>().Stop();
+        //GameObject.Find("BackgroundWind").GetComponent<AudioSource>().Stop();
         //GameObject.Find("Dust").GetComponent<ParticleSystem>().Stop();
         GetActualLevelFromFile();
         SceneManager.LoadScene("scn_Lvl" + GameManager.PlayerManager.ActualLevelNumber, LoadSceneMode.Single);

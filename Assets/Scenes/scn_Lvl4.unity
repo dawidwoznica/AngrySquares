@@ -472,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndGameCanvas: {fileID: 1403551189}
   EndGameText: {fileID: 301738386}
+  IsGameFinished: 0
 --- !u!4 &393577351
 Transform:
   m_ObjectHideFlags: 0
@@ -497,6 +498,7 @@ GameObject:
   - component: {fileID: 489053284}
   - component: {fileID: 489053283}
   - component: {fileID: 489053282}
+  - component: {fileID: 489053285}
   - component: {fileID: 489053281}
   m_Layer: 8
   m_Name: Keg 3
@@ -623,6 +625,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &489053285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489053279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165459afe5c9f65468ffac3711841008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &528746368 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224771393059420268, guid: 9c73e3671dbf654469fcb5dc17f4f310,
@@ -1176,6 +1189,7 @@ GameObject:
   - component: {fileID: 1164944817}
   - component: {fileID: 1164944816}
   - component: {fileID: 1164944815}
+  - component: {fileID: 1164944818}
   - component: {fileID: 1164944814}
   m_Layer: 8
   m_Name: Keg 1
@@ -1302,6 +1316,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1164944818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164944812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165459afe5c9f65468ffac3711841008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1262977299
 Prefab:
   m_ObjectHideFlags: 0
@@ -2005,6 +2030,7 @@ GameObject:
   - component: {fileID: 1753175937}
   - component: {fileID: 1753175936}
   - component: {fileID: 1753175935}
+  - component: {fileID: 1753175938}
   - component: {fileID: 1753175934}
   m_Layer: 8
   m_Name: Keg 4
@@ -2131,6 +2157,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1753175938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753175932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165459afe5c9f65468ffac3711841008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1887723555
 Prefab:
   m_ObjectHideFlags: 0
@@ -2357,6 +2394,7 @@ GameObject:
   - component: {fileID: 1919333827}
   - component: {fileID: 1919333826}
   - component: {fileID: 1919333825}
+  - component: {fileID: 1919333828}
   - component: {fileID: 1919333824}
   m_Layer: 8
   m_Name: Keg 2
@@ -2483,6 +2521,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1919333828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919333822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165459afe5c9f65468ffac3711841008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1927673539
 GameObject:
   m_ObjectHideFlags: 0

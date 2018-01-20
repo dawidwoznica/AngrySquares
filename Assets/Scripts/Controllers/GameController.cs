@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour
     public Canvas EndGameCanvas;
     public Text EndGameText;
 
-    private bool _isGameFinished;
+    [HideInInspector]
+    public bool IsGameFinished;
 
 
     void Start()
@@ -27,20 +28,30 @@ public class GameController : MonoBehaviour
 
     void CheckIfKegsExists()
     {    
-            if (!_isGameFinished && !GameObject.FindWithTag("Keg"))
+            if (!IsGameFinished && !GameObject.FindWithTag("Keg"))
             {
                 StartCoroutine(FinishTheLevel());
-                _isGameFinished = true;
+                IsGameFinished = true;
 
         }
     }
 
     void CheckAmountOfCannonBalls()
     {
-        if (!_isGameFinished && GameManager.PlayerManager.CannonBallsLeft == 0)
-        {            
-            StartCoroutine(FinishTheLevel());
-            _isGameFinished = true;
+        if (!IsGameFinished && GameManager.PlayerManager.CannonBallsLeft == 0)
+        {
+            StartCoroutine(WaitAndCheckKegsThenRestartIfNeeded());
+        }
+    }
+
+    IEnumerator WaitAndCheckKegsThenRestartIfNeeded()
+    {
+        yield return new WaitForSeconds(2);
+        CheckIfKegsExists();
+        if (!IsGameFinished)
+        {
+            StartCoroutine(RestartLevel());
+            IsGameFinished = true;
         }
     }
 
@@ -59,6 +70,26 @@ Cannonballs left: " + GameManager.PlayerManager.CannonBallsLeft;
         LoadNextLevel();
     }
 
+    IEnumerator RestartLevel()
+    {
+        yield return new WaitForSeconds(1);
+
+        EndGameCanvas.gameObject.SetActive(true);
+
+        EndGameText.text = @"You don't have more cannonballs
+
+Try again";
+
+        yield return new WaitForSeconds(5);
+
+        ReloadLevel();
+    }
+
+    IEnumerator WaitSomeTime()
+    {
+        yield return new WaitForSeconds(2);
+    }
+
     void LoadNextLevel()
     {
         if (Application.CanStreamedLevelBeLoaded("scn_Lvl" + (GameManager.PlayerManager.ActualLevelNumber + 1)))
@@ -71,6 +102,11 @@ Cannonballs left: " + GameManager.PlayerManager.CannonBallsLeft;
             GameManager.PlayerManager.ActualLevelNumber = 0;
             SceneManager.LoadScene("scn_MainMenu");
         }     
+    }
+
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene("scn_Lvl" + GameManager.PlayerManager.ActualLevelNumber);
     }
 
     void UpdateLevelNumber()

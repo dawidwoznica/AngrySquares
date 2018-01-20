@@ -56,15 +56,18 @@ public class CannonController : MonoBehaviour {
 
 	public void Shoot()
 	{
-		if (!GameManager.OptionsManager.IsSoundMuted)
-		{
-			_cannonShoot.Play();
-		}
-		CannonShootEffect.Play();
-		GameObject _cannonBallCopy = Instantiate(GameManager.CannonManager.CannonBall, ShotPosition.position, transform.rotation);
-		_cannonBallRB = _cannonBallCopy.GetComponent<Rigidbody2D>();
-		_cannonBallRB.AddForce(transform.right * GameManager.CannonManager.FirePower);
-	    GameManager.PlayerManager.CannonBallsLeft--;
+	    if (GameManager.PlayerManager.CannonBallsLeft > 0)
+	    {
+	        if (!GameManager.OptionsManager.IsSoundMuted)
+	        {
+	            _cannonShoot.Play();
+	        }
+	        CannonShootEffect.Play();
+	        GameObject _cannonBallCopy = Instantiate(GameManager.CannonManager.CannonBall, ShotPosition.position, transform.rotation);
+	        _cannonBallRB = _cannonBallCopy.GetComponent<Rigidbody2D>();
+	        _cannonBallRB.AddForce(transform.right * GameManager.CannonManager.FirePower);
+	        GameManager.PlayerManager.CannonBallsLeft--;
+        }	
 	}
 
 
