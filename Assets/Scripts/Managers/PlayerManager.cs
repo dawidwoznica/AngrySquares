@@ -8,5 +8,5 @@ public class PlayerManager : MonoBehaviour {
     public int CannonBallsLeft;
 
     [HideInInspector]
-    public int KegsLeft;
+    public int ActualLevelNumber;
 }

@@ -8,8 +8,11 @@ public class CannonController : MonoBehaviour {
 
 	Rigidbody2D _cannonBallRB;
 	public CannonMovementController CannonMovementController;
+    public Transform ShotPosition;
+    public ParticleSystem CannonShootEffect;
 
-	private AudioSource _cannonShoot;
+
+    private AudioSource _cannonShoot;
 
 /*    private Dictionary<string, Action> keywordActions = new Dictionary<string, Action>();
 	private KeywordRecognizer keywordRecognizer;*/
@@ -18,24 +21,25 @@ public class CannonController : MonoBehaviour {
 	void Start ()
 	{
 		_cannonShoot = GetComponent<AudioSource>();
+	    GameManager.PlayerManager.CannonBallsLeft = 4;
 
-	 /*   keywordActions.Add("fire", Shoot);
-		keywordActions.Add("shoot", Shoot);
-		keywordActions.Add("shot", Shoot);
-		keywordActions.Add("up", Up);
-		keywordActions.Add("down", Down);
-		keywordActions.Add("upper", Up);
-		keywordActions.Add("lower", Down);
-		keywordActions.Add("left", CannonMovementController.Left);
-		keywordActions.Add("right", CannonMovementController.Right);
-		keywordActions.Add("go left", CannonMovementController.Left);
-		keywordActions.Add("go right", CannonMovementController.Right);
-		keywordActions.Add("move left", CannonMovementController.Left);
-		keywordActions.Add("move right", CannonMovementController.Right);
-
-		keywordRecognizer = new KeywordRecognizer(keywordActions.Keys.ToArray());
-		keywordRecognizer.OnPhraseRecognized += OnKeyRecognized;
-		keywordRecognizer.Start();*/
+	    /*   keywordActions.Add("fire", Shoot);
+           keywordActions.Add("shoot", Shoot);
+           keywordActions.Add("shot", Shoot);
+           keywordActions.Add("up", Up);
+           keywordActions.Add("down", Down);
+           keywordActions.Add("upper", Up);
+           keywordActions.Add("lower", Down);
+           keywordActions.Add("left", CannonMovementController.Left);
+           keywordActions.Add("right", CannonMovementController.Right);
+           keywordActions.Add("go left", CannonMovementController.Left);
+           keywordActions.Add("go right", CannonMovementController.Right);
+           keywordActions.Add("move left", CannonMovementController.Left);
+           keywordActions.Add("move right", CannonMovementController.Right);
+   
+           keywordRecognizer = new KeywordRecognizer(keywordActions.Keys.ToArray());
+           keywordRecognizer.OnPhraseRecognized += OnKeyRecognized;
+           keywordRecognizer.Start();*/
 	}
 	
    /* private void OnKeyRecognized(PhraseRecognizedEventArgs args)
@@ -56,10 +60,11 @@ public class CannonController : MonoBehaviour {
 		{
 			_cannonShoot.Play();
 		}
-		GameManager.CannonManager.CannonShootEffect.Play();
-		GameObject _cannonBallCopy = Instantiate(GameManager.CannonManager.CannonBall, GameManager.CannonManager.ShotPosition.position, transform.rotation);
+		CannonShootEffect.Play();
+		GameObject _cannonBallCopy = Instantiate(GameManager.CannonManager.CannonBall, ShotPosition.position, transform.rotation);
 		_cannonBallRB = _cannonBallCopy.GetComponent<Rigidbody2D>();
 		_cannonBallRB.AddForce(transform.right * GameManager.CannonManager.FirePower);
+	    GameManager.PlayerManager.CannonBallsLeft--;
 	}
 
 

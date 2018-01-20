@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +13,8 @@ public class MenuController : MonoBehaviour {
         GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().Stop();
         GameObject.Find("BackgroundWind").GetComponent<AudioSource>().Stop();
         //GameObject.Find("Dust").GetComponent<ParticleSystem>().Stop();
-        SceneManager.LoadScene("scn_Lvl1", LoadSceneMode.Single);
+        GetActualLevelFromFile();
+        SceneManager.LoadScene("scn_Lvl" + GameManager.PlayerManager.ActualLevelNumber, LoadSceneMode.Single);
     }
 
     public void Levels()
@@ -32,5 +35,17 @@ public class MenuController : MonoBehaviour {
     public void Quit()
     {
         Application.Quit();
+    }
+
+    void GetActualLevelFromFile()
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, "ActualLevel.txt");
+        StreamReader sr = new StreamReader(path);
+        string line = sr.ReadLine();
+        if (line != null)
+        {
+            GameManager.PlayerManager.ActualLevelNumber = Int32.Parse(line);
+        }
+        sr.Close();
     }
 }

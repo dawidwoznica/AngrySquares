@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114798545432022910}
   - component: {fileID: 114936322685343578}
   - component: {fileID: 114881145533647966}
+  - component: {fileID: 114264745962664622}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,6 +44,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114264745962664622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536463809966082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4843101ce2956cd4e83ebb170cf4e2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CannonBallsLeft: 0
+  ActualLevelNumber: 0
 --- !u!114 &114276031562107774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,8 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae23899295bf1eb4997d91f90cd9866d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BarrelRotationSpeed: 0
-  FirePower: 100
+  BarrelRotationSpeed: 200
+  FirePower: 800
   CannonBall: {fileID: 1059687981861074, guid: af9d6df6b9f617c4cbb0dcc866741973, type: 2}
   ShotPosition: {fileID: 0}
   CannonShootEffect: {fileID: 0}

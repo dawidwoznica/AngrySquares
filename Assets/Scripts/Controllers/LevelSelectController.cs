@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,7 @@ public class LevelSelectController : MonoBehaviour
 
     public void SelectLevel()
     {
+        GameManager.PlayerManager.ActualLevelNumber = Int32.Parse(_levelButtonText.text);
         SceneManager.LoadScene("scn_Lvl" + _levelButtonText.text);
     }
 }
