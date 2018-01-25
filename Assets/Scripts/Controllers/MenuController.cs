@@ -40,12 +40,14 @@ public class MenuController : MonoBehaviour {
     void GetActualLevelFromFile()
     {
         string path = Path.Combine(Application.streamingAssetsPath, "ActualLevel.txt");
-        StreamReader sr = new StreamReader(path);
-        string line = sr.ReadLine();
+        WWW reader = new WWW (path);
+        while (!reader.isDone)
+        {
+        }
+        string line = reader.text;
         if (line != null)
         {
             GameManager.PlayerManager.ActualLevelNumber = Int32.Parse(line);
         }
-        sr.Close();
     }
 }
