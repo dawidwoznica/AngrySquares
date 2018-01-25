@@ -119,7 +119,8 @@ Try again";
 
 	void SaveLevelNumber()
 	{
-		string path = string.Format("{0}/{1}", Application.persistentDataPath, "ActualLevel.txt");
+		//string path = string.Format("{0}/{1}", Application.persistentDataPath, "ActualLevel.txt");
+		string path = Path.Combine(Application.streamingAssetsPath, "ActualLevel.txt");
 		File.WriteAllText(path, String.Empty);
 		File.WriteAllText(path, GameManager.PlayerManager.ActualLevelNumber.ToString());
 	}
