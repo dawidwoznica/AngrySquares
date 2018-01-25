@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelSelectController : MonoBehaviour
+public class LevelSelect : MonoBehaviour
 {
 
     private Text _levelButtonText;
@@ -17,6 +17,9 @@ public class LevelSelectController : MonoBehaviour
 
     public void SelectLevel()
     {
+        GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().Stop();
+        //GameObject.Find("BackgroundWind").GetComponent<AudioSource>().Stop();
+        //GameObject.Find("Dust").GetComponent<ParticleSystem>().Stop();
         GameManager.PlayerManager.ActualLevelNumber = Int32.Parse(_levelButtonText.text);
         SceneManager.LoadScene("scn_Lvl" + _levelButtonText.text);
     }

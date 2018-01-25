@@ -95,6 +95,7 @@ Try again";
 		if (Application.CanStreamedLevelBeLoaded("scn_Lvl" + (GameManager.PlayerManager.ActualLevelNumber + 1)))
 		{
 			UpdateLevelNumber();
+			UpdateUnlockedLevels();
 			SceneManager.LoadScene("scn_Lvl" + GameManager.PlayerManager.ActualLevelNumber);
 		}
 		else
@@ -118,8 +119,30 @@ Try again";
 
 	void SaveLevelNumber()
 	{
-		string path = Path.Combine(Application.streamingAssetsPath, "ActualLevel.txt");
+		string path = string.Format("{0}/{1}", Application.persistentDataPath, "ActualLevel.txt");
 		File.WriteAllText(path, String.Empty);
 		File.WriteAllText(path, GameManager.PlayerManager.ActualLevelNumber.ToString());
+	}
+
+	void UpdateUnlockedLevels()
+	{
+		string path = Path.Combine(Application.streamingAssetsPath, "UnlockedLevels.txt");
+		string line = ReadFile(path);
+		if (Int32.Parse(line) < GameManager.PlayerManager.ActualLevelNumber)
+		{
+			File.WriteAllText(path, String.Empty);
+			File.WriteAllText(path, GameManager.PlayerManager.ActualLevelNumber.ToString());
+		}
+	}
+
+	string ReadFile(string path)
+	{
+		WWW reader = new WWW(path);
+		while (!reader.isDone)
+		{
+		}
+		string line = reader.text;
+
+		return line;
 	}
 }

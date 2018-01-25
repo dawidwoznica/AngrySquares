@@ -39,15 +39,33 @@ public class MenuController : MonoBehaviour {
 
     void GetActualLevelFromFile()
     {
-        string path = Path.Combine(Application.streamingAssetsPath, "ActualLevel.txt");
-        WWW reader = new WWW (path);
+        string mainPath = string.Format("{0}/{1}", Application.persistentDataPath, "ActualLevel.txt");
+        string supportPath = Path.Combine(Application.streamingAssetsPath, "ActualLevel.txt");
+
+        string line;
+
+       /* if (File.Exists(mainPath))
+            line = ReadFile(mainPath);
+        else*/
+            line = ReadFile(supportPath);
+       
+
+        if (line != null)
+        {
+            Debug.Log(line);
+            GameManager.PlayerManager.ActualLevelNumber = Int32.Parse(line);
+            File.WriteAllText(mainPath, line);
+        }
+    }
+
+    string ReadFile(string path)
+    {
+        WWW reader = new WWW(path);
         while (!reader.isDone)
         {
         }
         string line = reader.text;
-        if (line != null)
-        {
-            GameManager.PlayerManager.ActualLevelNumber = Int32.Parse(line);
-        }
+      
+        return line;
     }
 }
